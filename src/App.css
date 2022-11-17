@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+* {
+  /* background-color: #1d1b19; */
+  transition: linear 0.4s;
+  /* overflow-x: hidden; */
+  font-family: Jost, Arial, Helvetica, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blink-bg {
+  font-size: px;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  animation: blinkingBackground 3s infinite;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes blinkingBackground {
+  0% {
+    color: #28a745;
+  }
+  25% {
+    color: #28a746c1;
+  }
+  50% {
+    color: #85993b00;
+  }
+  75% {
+    color: #29380d;
+  }
+  100% {
+    color: rgba(56, 93, 30, 0.692)c1;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.css-13xfq8m-MuiTabPanel-root {
+  padding: 16px !important;
+}
+#send_message:hover {
+  border-color: #cc3300;
+  color: #cc3300;
+  transition: 0.5s;
+}
+#send_message {
+  border: 1px solid #888;
+  width: "100%";
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.row .happycard {
+  background: #f4f4f4;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.happycard:hover {
+  background: #e5e5e5;
+}
+.biography{
+  display: flex;
+}
+@media(max-width:1400px){
+  .biography{
+    display: block !important;
   }
-  to {
-    transform: rotate(360deg);
+  .downloadBtn{
+    margin-top: 50px;
   }
+}
+.MuiTabs-scroller{
+  overflow-x: scroll !important;
+}
+.tab{
+  color:#888;
+}
+.tab.active{
+  color:#987750;
 }
