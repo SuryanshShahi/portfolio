@@ -6,7 +6,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import Home from "./Home";
 import XYZ from "./hello";
-
+import { CursorProvider } from "react-cursor-custom";
 
 function App() {
   useEffect(() => {
@@ -16,11 +16,12 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/hello" component={XYZ} />
+        <CursorProvider color={"#888"} noRing={false} ringSize={35}>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/hello" component={XYZ} />
 
-
-        <Redirect to="/" />
+          <Redirect to="/" />
+        </CursorProvider>
       </Switch>
     </div>
   );

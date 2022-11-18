@@ -25,10 +25,10 @@ function Home() {
   return (
     <div className="row gx-0" style={{ background: "#1d1b19" }}>
       <div
-        className={column ? "col-lg-8 col-12 px-5" : "col-lg-7 col-12 px-5"}
+        className={column ? "col-lg-8 col-12 px-lg-5 order-lg-first order-md-first order-last" : "col-lg-7 col-12 px-lg-5"}
         style={{ borderRight: "1px solid #888" }}
       >
-        <div className="container px-5" style={{ paddingTop: "100px" }}>
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
           >
@@ -49,7 +49,7 @@ function Home() {
             online stores.
           </p>
         </div>
-        <div className="container px-5" style={{ paddingTop: "100px" }}>
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
           >
@@ -74,17 +74,17 @@ function Home() {
             <div className="">
               <div className="row" style={{ color: "#888", fontSize: "18px" }}>
                 <div className="col-6 font-weight-bold pt-2">NAME</div>
-                <div className="col-6 pt-2 text-white">Suryansh Shahi</div>
+                <div className="col-6 pt-2" style={{color:"#ddd"}}>Suryansh Shahi</div>
                 <div className="col-6 font-weight-bold pt-2">BIRTHDAY</div>
-                <div className="col-6 pt-2 text-white">06/03/2002</div>
+                <div className="col-6 pt-2" style={{color:"#ddd"}}>06/03/2002</div>
                 <div className="col-6 font-weight-bold pt-2">AGE</div>
-                <div className="col-6 pt-2 text-white">22</div>
+                <div className="col-6 pt-2" style={{color:"#ddd"}}>22</div>
                 <div className="col-6 font-weight-bold pt-2">ADDRESS</div>
-                <div className="col-6 pt-2 text-white">ADDRESS</div>
+                <div className="col-6 pt-2" style={{color:"#ddd"}}>ADDRESS</div>
                 <div className="col-6 font-weight-bold pt-2">PHONE</div>
-                <div className="col-6 pt-2 text-white">7376190196</div>
+                <div className="col-6 pt-2" style={{color:"#ddd"}}>7376190196</div>
                 <div className="col-6 font-weight-bold pt-2">EMAIL</div>
-                <div className="col-6 pt-2 text-white">
+                <div className="col-6 pt-2" style={{color:"#ddd", wordBreak:"break-word"}}>
                   suryansh5476@gmail.com
                 </div>
               </div>
@@ -110,8 +110,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="px-4" style={{ paddingTop: "100px" }}>
-          <div className="nav nav-tabs border-0 mb-4">
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
+          <div className="nav nav-tabs border-0 mb-4 justify-content-lg-start justify-content-md-start justify-content-center justify-content-sm-start d-flex">
             <li
               style={{ fontSize: "30px" }}
               className="pr-4 tab active"
@@ -144,7 +144,7 @@ function Home() {
             <div id="exp" className="active tab-pane">
               <div className="pb-5 text-white">
                 <div
-                  className="py-5 px-5 mb-3"
+                  className="py-lg-5 py-3 px-lg-5 px-3 mb-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -170,7 +170,7 @@ function Home() {
                   </p>
                 </div>
                 <div
-                  className="py-5 px-5 mb-3"
+                  className="py-lg-5 py-3 px-lg-5 px-3 mb-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -204,7 +204,7 @@ function Home() {
                   </p>
                 </div>
                 <div
-                  className="py-5 px-5 mb-3"
+                  className="py-lg-5 py-3 px-lg-5 px-3 mb-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -233,7 +233,7 @@ function Home() {
                   </p>
                 </div>
                 <div
-                  className="py-5 px-5"
+                  className="py-lg-5 py-3 px-lg-5 px-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -265,7 +265,7 @@ function Home() {
             <div id="edu" className="tab-pane fade">
               <div className="pb-5 text-white">
                 <div
-                  className="py-5 px-5 mb-3"
+                  className="py-lg-5 py-3 px-lg-5 px-3 mb-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -299,7 +299,7 @@ function Home() {
                   </p>
                 </div>
                 <div
-                  className="py-5 px-5 mb-3"
+                  className="py-lg-5 py-3 px-lg-5 px-3 mb-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -323,7 +323,7 @@ function Home() {
                   ></p>
                 </div>
                 <div
-                  className="py-5 px-5"
+                  className="py-lg-5 py-3 px-lg-5 px-3"
                   style={{ background: "#181715", border: "1px solid #151412" }}
                 >
                   <div className="d-flex">
@@ -673,7 +673,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="container px-5" style={{ paddingTop: "100px" }}>
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
           >
@@ -709,7 +709,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="container px-5" style={{ paddingTop: "100px" }}>
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
           >
@@ -724,7 +724,7 @@ function Home() {
 
           <div className="container pb-5 text-white">
             <div
-              className="py-5 pl-5 mb-3 row"
+              className="py-lg-5 py-3 pl-lg-5 mb-3 row"
               style={{ background: "#181715", border: "1px solid #151412" }}
             >
               <div className="col-9" style={{ borderRight: "1px solid red" }}>
@@ -748,7 +748,7 @@ function Home() {
             </div>
 
             <div
-              className="py-5 pl-5 mb-3 row"
+              className="py-lg-5 py-3 pl-lg-5 mb-3 row"
               style={{ background: "#181715", border: "1px solid #151412" }}
             >
               <div className="col-9" style={{ borderRight: "1px solid red" }}>
@@ -772,7 +772,7 @@ function Home() {
             </div>
 
             <div
-              className="py-5 pl-5 mb-3 row"
+              className="py-lg-5 py-3 pl-lg-5 mb-3 row"
               style={{ background: "#181715", border: "1px solid #151412" }}
             >
               <div className="col-9" style={{ borderRight: "1px solid red" }}>
@@ -796,7 +796,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="container px-5" style={{ paddingTop: "100px" }}>
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
           >
@@ -829,15 +829,14 @@ function Home() {
                       <div
                         className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
                         style={{
-                          height: "150px",
-                          width: "150px",
+                          height: "100px",
+                          width: "100px",
                           borderRadius: "50%",
                         }}
                       ></div>
                       <div>
                         <div
-                          className="font-weight-bolder"
-                          style={{ fontSize: "17px" }}
+                          style={{ fontSize: "17px",fontWeight:"500" }}
                         >
                           Nikunj Kishore Tiwari
                         </div>
@@ -860,15 +859,14 @@ function Home() {
                       <div
                         className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
                         style={{
-                          height: "150px",
-                          width: "150px",
+                          height: "100px",
+                          width: "100px",
                           borderRadius: "50%",
                         }}
                       ></div>
                       <div>
                         <div
-                          className="font-weight-bolder"
-                          style={{ fontSize: "17px" }}
+                          style={{ fontSize: "17px",fontWeight:"500" }}
                         >
                           Manish Kumar
                         </div>
@@ -895,15 +893,14 @@ function Home() {
                       <div
                         className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
                         style={{
-                          height: "150px",
-                          width: "150px",
+                          height: "100px",
+                          width: "100px",
                           borderRadius: "50%",
                         }}
                       ></div>
                       <div>
                         <div
-                          className="font-weight-bolder"
-                          style={{ fontSize: "17px" }}
+                          style={{ fontSize: "17px",fontWeight:"500" }}
                         >
                           Anuradha Bhardwaj
                         </div>
@@ -953,7 +950,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="container px-5" style={{ paddingTop: "100px" }}>
+        <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
           >
@@ -1043,7 +1040,7 @@ function Home() {
           </Box>
         </div>
         <div
-          className="container px-5 text-white"
+          className="container px-lg-5 text-white"
           style={{ paddingTop: "100px" }}
         >
           <div className="pb-5">
@@ -1092,7 +1089,7 @@ function Home() {
           </div>
         </div>
         <hr className="w-100" style={{ color: "white" }}></hr>
-        <div className="px-5 py-5 text-white">
+        <div className="px-lg-5 container py-5 text-white">
           Copyright © 2022. All rights reserved.<br></br> Developed by Suryansh
         </div>
       </div>
@@ -1100,13 +1097,13 @@ function Home() {
       <div
         className={
           column
-            ? "col-lg-4 col-12 px-5 position-relative"
-            : "col-lg-5 col-12 px-5 position-relative"
+            ? "col-lg-4 col-12 px-lg-5 px-3 position-relative"
+            : "col-lg-5 col-12 px-lg-5 px-3 position-relative  order-lg-last order-md-last order-first"
         }
       >
         <div
-          className="container position-sticky"
-          style={{ paddingTop: "100px", top: "0" }}
+          className="container position-sticky mt-5"
+          style={{ top: "0" }}
         >
           <div
             className="position-relative"
