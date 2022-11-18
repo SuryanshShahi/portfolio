@@ -25,7 +25,7 @@
     color: #29380d;
   }
   100% {
-    color: rgba(56, 93, 30, 0.692)c1;
+    color: rgba(56, 93, 30, 0.692) c1;
   }
 }
 ::placeholder {
@@ -54,23 +54,52 @@
 .happycard:hover {
   background: #e5e5e5;
 }
-.biography{
+.biography {
   display: flex;
 }
-@media(max-width:1400px){
-  .biography{
+@media (max-width: 1400px) {
+  .biography {
     display: block !important;
   }
-  .downloadBtn{
+  .downloadBtn {
     margin-top: 50px;
   }
 }
-.MuiTabs-scroller{
+.MuiTabs-scroller {
   overflow-x: scroll !important;
 }
-.tab{
-  color:#888;
+.tab {
+  color: #888;
 }
-.tab.active{
-  color:#987750;
+.tab.active {
+  color: #987750;
+}
+
+/* -------------------------projects---------------------- */
+.details {
+  opacity: 0;
+  position: absolute;
+  top:100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  background: rgb(152, 119, 80);
+}
+.projectCard:hover .content {
+  display: block;
+  transition: 0.8s;
+}
+.projectCard .content {
+  display: none;
+}
+.projectCard:hover .details {
+  opacity: 1;
+  top: 0;
+  color: white;
+}
+
+.carousel-inner::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }

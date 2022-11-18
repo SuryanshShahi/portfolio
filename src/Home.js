@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
 import TextField from "@mui/material/TextField";
 import profile from "./suryansh.jpg";
 import { Typewriter } from "react-simple-typewriter";
-import { textAlign } from "@mui/system";
+import { data } from "./Data";
 
 function Home() {
   const [value, setValue] = useState("0");
@@ -686,31 +681,31 @@ function Home() {
           </div>
           <h1 className="py-5 text-white">Featured Projects</h1>
           <p className="" style={{ textAlign: "justify" }}></p>
+
           <div className="row text-center">
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
-            <div className="col-3 mb-3">
-              <div className="happycard py-5 px-5">hello</div>
-            </div>
+            {data.map((e) => {
+              return (
+                <div className="col-6 mb-3">
+                  <div className="projectCard position-relative">
+                    <img
+                      src={e.image}
+                      className="img-fluid"
+                      style={{ height: "300px" }}
+                    />
+                    <div className="details">
+                      <div className="justify-content-center align-items-center d-flex">
+                        <div className="p-3">
+                          <div className="text-white content">{e.text}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-white mt-2" style={{ fontSize: "18px" }}>
+                    {e.name}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -808,16 +803,156 @@ function Home() {
             CUSTOMERS
           </div>
           <h1 className="py-5 text-white">HAPPY PEOPLE</h1>
-          <div className="row text-center">
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
-            <div className="col-3 py-5 px-5 mx-2 mb-2 happycard ">hello</div>
+
+          <div className="bd-example">
+            <div
+              id="carouselExampleCaptions"
+              className="carousel slide pb-5 pt-4"
+              data-ride="carousel"
+              style={{ background: "#181715", border: "1px solid #151412", borderRadius:"40px",boxShadow:"1px 2px 3px 1px #4b4a4a" }}
+            >
+              <div
+                className="carousel-inner text-dark text-center mx-auto"
+                style={{ height: "40vh", overflowY: "scroll" }}
+              >
+                <div className="carousel-item active">
+                  <div className="d-flex text-white align-items-center mx-auto w-75">
+                    <div className="text-center">
+                      <p>
+                        <span className="fa fa-quote-left"></span>&nbsp;He is
+                        very much fine in work ...Good knowledge in React js
+                        able to create diffrent kind of responsive designs..
+                        communication skill wise is is perfectly fine ...overall
+                        Good knowledge in frontend domain.&nbsp;
+                        <span className="fa fa-quote-right"></span>
+                      </p>
+                      <div
+                        className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
+                        style={{
+                          height: "150px",
+                          width: "150px",
+                          borderRadius: "50%",
+                        }}
+                      ></div>
+                      <div>
+                        <div
+                          className="font-weight-bolder"
+                          style={{ fontSize: "17px" }}
+                        >
+                          Nikunj Kishore Tiwari
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <div className="d-flex text-white align-items-center mx-auto w-75">
+                    <div className="text-center">
+                      <p>
+                        <span className="fa fa-quote-left"></span>&nbsp;
+                        Suryansh is very good In frontend designing. He was an
+                        inspiration to the rest of us as he always went the
+                        extra mile and found great ways to quickly solve
+                        problems. I’d definitely work with Suryansh again.
+                        &nbsp;
+                        <span className="fa fa-quote-right"></span>
+                      </p>
+                      <div
+                        className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
+                        style={{
+                          height: "150px",
+                          width: "150px",
+                          borderRadius: "50%",
+                        }}
+                      ></div>
+                      <div>
+                        <div
+                          className="font-weight-bolder"
+                          style={{ fontSize: "17px" }}
+                        >
+                          Manish Kumar
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <div className="d-flex text-white align-items-center mx-auto w-75">
+                    <div className="text-center">
+                      <p>
+                        <span className="fa fa-quote-left"></span>&nbsp;Suryansh
+                        has worked as a front-end developer for our website. His
+                        knowledge of frontend website development was very
+                        helpful to our team. He has a very good knowledge of
+                        html, css & javascript. During the development of the
+                        website he solved various issues very quickly. He is
+                        very hard working, has good communication skills. His
+                        willingness to learn and take on new responsibilities is
+                        something to be desired in any professional. It has been
+                        a pleasure to work with you !&nbsp;
+                        <span className="fa fa-quote-right"></span>
+                      </p>
+                      <div
+                        className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
+                        style={{
+                          height: "150px",
+                          width: "150px",
+                          borderRadius: "50%",
+                        }}
+                      ></div>
+                      <div>
+                        <div
+                          className="font-weight-bolder"
+                          style={{ fontSize: "17px" }}
+                        >
+                          Anuradha Bhardwaj
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ol className="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <a
+                className="carousel-control-prev"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+              <a
+                className="carousel-control-next"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+              </a>
+            </div>
           </div>
         </div>
+
         <div className="container px-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
