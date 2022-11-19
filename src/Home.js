@@ -3,16 +3,17 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import profile from "./suryansh.jpg";
 import { Typewriter } from "react-simple-typewriter";
-import { data } from "./Data";
+import { Data } from "./Data";
 
 function Home() {
-  const [value, setValue] = useState("0");
   const [column, setColumn] = useState(false);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const [data, setData] = useState(Data);
+  const filterData = (categItem) => {
+    const updatedItems = Data.filter((e) => {
+      return e.category === categItem;
+    });
+    setData(updatedItems);
   };
-
   const changeBackground = () => {
     if (window.scrollY >= 75) {
       setColumn(true);
@@ -25,7 +26,11 @@ function Home() {
   return (
     <div className="row gx-0" style={{ background: "#1d1b19" }}>
       <div
-        className={column ? "col-lg-8 col-12 px-lg-5 order-lg-first order-md-first order-last" : "col-lg-7 col-12 px-lg-5"}
+        className={
+          column
+            ? "col-lg-8 col-12 px-lg-5 order-lg-first order-md-first order-last"
+            : "col-lg-7 col-12 px-lg-5"
+        }
         style={{ borderRight: "1px solid #888" }}
       >
         <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
@@ -74,17 +79,30 @@ function Home() {
             <div className="">
               <div className="row" style={{ color: "#888", fontSize: "18px" }}>
                 <div className="col-6 font-weight-bold pt-2">NAME</div>
-                <div className="col-6 pt-2" style={{color:"#ddd"}}>Suryansh Shahi</div>
+                <div className="col-6 pt-2" style={{ color: "#ddd" }}>
+                  Suryansh Shahi
+                </div>
                 <div className="col-6 font-weight-bold pt-2">BIRTHDAY</div>
-                <div className="col-6 pt-2" style={{color:"#ddd"}}>06/03/2002</div>
+                <div className="col-6 pt-2" style={{ color: "#ddd" }}>
+                  06/03/2002
+                </div>
                 <div className="col-6 font-weight-bold pt-2">AGE</div>
-                <div className="col-6 pt-2" style={{color:"#ddd"}}>22</div>
+                <div className="col-6 pt-2" style={{ color: "#ddd" }}>
+                  22
+                </div>
                 <div className="col-6 font-weight-bold pt-2">ADDRESS</div>
-                <div className="col-6 pt-2" style={{color:"#ddd"}}>ADDRESS</div>
+                <div className="col-6 pt-2" style={{ color: "#ddd" }}>
+                  ADDRESS
+                </div>
                 <div className="col-6 font-weight-bold pt-2">PHONE</div>
-                <div className="col-6 pt-2" style={{color:"#ddd"}}>7376190196</div>
+                <div className="col-6 pt-2" style={{ color: "#ddd" }}>
+                  7376190196
+                </div>
                 <div className="col-6 font-weight-bold pt-2">EMAIL</div>
-                <div className="col-6 pt-2" style={{color:"#ddd", wordBreak:"break-word"}}>
+                <div
+                  className="col-6 pt-2"
+                  style={{ color: "#ddd", wordBreak: "break-word" }}
+                >
                   suryansh5476@gmail.com
                 </div>
               </div>
@@ -114,25 +132,31 @@ function Home() {
           <div className="nav nav-tabs border-0 mb-4 justify-content-lg-start justify-content-md-start justify-content-center justify-content-sm-start d-flex">
             <li
               style={{ fontSize: "30px" }}
-              className="pr-4 tab active"
+              className="tab active"
               href="#exp"
               data-toggle="tab"
               type="button"
             >
               Experience
+              <span className="px-3" style={{ color: "rgba(255,255,255,.2)" }}>
+                —
+              </span>
             </li>
             <li
               style={{ fontSize: "30px" }}
-              className="px-4 tab"
+              className="tab"
               href="#edu"
               data-toggle="tab"
               type="button"
             >
               Education
+              <span className="px-3" style={{ color: "rgba(255,255,255,.2)" }}>
+                —
+              </span>
             </li>
             <li
               style={{ fontSize: "30px" }}
-              className="px-4 tab"
+              className="tab"
               href="#skills"
               data-toggle="tab"
               type="button"
@@ -681,7 +705,44 @@ function Home() {
           </div>
           <h1 className="py-5 text-white">Featured Projects</h1>
           <p className="" style={{ textAlign: "justify" }}></p>
-
+          <div
+            className="nav nav-tabs text-white border-0 mb-3"
+            style={{ fontSize: "18px" }}
+          >
+            <li
+              className="tab active"
+              style={{ fontSize: "30px" }}
+              onClick={() => setData(Data)}
+              type="button"
+              data-toggle="tab"
+            >
+              All
+              <span className="px-3" style={{ color: "rgba(255,255,255,.2)" }}>
+                —
+              </span>
+            </li>
+            <li
+              className="tab"
+              type="button"
+              data-toggle="tab"
+              style={{ fontSize: "30px" }}
+              onClick={() => filterData("personal")}
+            >
+              Personal Projects
+              <span className="px-3" style={{ color: "rgba(255,255,255,.2)" }}>
+                —
+              </span>
+            </li>
+            <li
+              className="tab"
+              type="button"
+              data-toggle="tab"
+              style={{ fontSize: "30px" }}
+              onClick={() => filterData("internship")}
+            >
+              Internships
+            </li>
+          </div>
           <div className="row text-center">
             {data.map((e) => {
               return (
@@ -796,6 +857,7 @@ function Home() {
             </div>
           </div>
         </div>
+
         <div className="container px-lg-5" style={{ paddingTop: "100px" }}>
           <div
             style={{ color: "#987750", fontSize: "18px", fontWeight: "500" }}
@@ -809,7 +871,12 @@ function Home() {
               id="carouselExampleCaptions"
               className="carousel slide pb-5 pt-4"
               data-ride="carousel"
-              style={{ background: "#181715", border: "1px solid #151412", borderRadius:"40px",boxShadow:"1px 2px 3px 1px #4b4a4a" }}
+              style={{
+                background: "#181715",
+                border: "1px solid #151412",
+                borderRadius: "40px",
+                boxShadow: "1px 2px 3px 1px #4b4a4a",
+              }}
             >
               <div
                 className="carousel-inner text-dark text-center mx-auto"
@@ -818,7 +885,20 @@ function Home() {
                 <div className="carousel-item active">
                   <div className="d-flex text-white align-items-center mx-auto w-75">
                     <div className="text-center">
-                      <p>
+                      <div
+                        className="bg-primary mx-auto d-flex align-items-center justify-content-center"
+                        style={{
+                          height: "100px",
+                          width: "100px",
+                          borderRadius: "50%",
+                        }}
+                      ></div>
+                      <div className="mt-3">
+                        <div style={{ fontSize: "17px", fontWeight: "500" }}>
+                          Nikunj Kishore Tiwari
+                        </div>
+                      </div>
+                      <p className="my-4">
                         <span className="fa fa-quote-left"></span>&nbsp;He is
                         very much fine in work ...Good knowledge in React js
                         able to create diffrent kind of responsive designs..
@@ -826,28 +906,26 @@ function Home() {
                         Good knowledge in frontend domain.&nbsp;
                         <span className="fa fa-quote-right"></span>
                       </p>
-                      <div
-                        className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
-                        style={{
-                          height: "100px",
-                          width: "100px",
-                          borderRadius: "50%",
-                        }}
-                      ></div>
-                      <div>
-                        <div
-                          style={{ fontSize: "17px",fontWeight:"500" }}
-                        >
-                          Nikunj Kishore Tiwari
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
                   <div className="d-flex text-white align-items-center mx-auto w-75">
                     <div className="text-center">
-                      <p>
+                      <div
+                        className="bg-primary mx-auto d-flex align-items-center justify-content-center"
+                        style={{
+                          height: "100px",
+                          width: "100px",
+                          borderRadius: "50%",
+                        }}
+                      ></div>
+                      <div className="mt-3">
+                        <div style={{ fontSize: "17px", fontWeight: "500" }}>
+                          Manish Kumar
+                        </div>
+                      </div>
+                      <p className="my-4">
                         <span className="fa fa-quote-left"></span>&nbsp;
                         Suryansh is very good In frontend designing. He was an
                         inspiration to the rest of us as he always went the
@@ -856,28 +934,26 @@ function Home() {
                         &nbsp;
                         <span className="fa fa-quote-right"></span>
                       </p>
-                      <div
-                        className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
-                        style={{
-                          height: "100px",
-                          width: "100px",
-                          borderRadius: "50%",
-                        }}
-                      ></div>
-                      <div>
-                        <div
-                          style={{ fontSize: "17px",fontWeight:"500" }}
-                        >
-                          Manish Kumar
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="carousel-item">
                   <div className="d-flex text-white align-items-center mx-auto w-75">
                     <div className="text-center">
-                      <p>
+                      <div
+                        className="bg-primary mx-auto d-flex align-items-center justify-content-center"
+                        style={{
+                          height: "100px",
+                          width: "100px",
+                          borderRadius: "50%",
+                        }}
+                      ></div>
+                      <div className="mt-3">
+                        <div style={{ fontSize: "17px", fontWeight: "500" }}>
+                          Anuradha Bhardwaj
+                        </div>
+                      </div>
+                      <p className="my-4">
                         <span className="fa fa-quote-left"></span>&nbsp;Suryansh
                         has worked as a front-end developer for our website. His
                         knowledge of frontend website development was very
@@ -890,21 +966,6 @@ function Home() {
                         a pleasure to work with you !&nbsp;
                         <span className="fa fa-quote-right"></span>
                       </p>
-                      <div
-                        className="bg-primary mx-auto d-flex align-items-center justify-content-center my-4"
-                        style={{
-                          height: "100px",
-                          width: "100px",
-                          borderRadius: "50%",
-                        }}
-                      ></div>
-                      <div>
-                        <div
-                          style={{ fontSize: "17px",fontWeight:"500" }}
-                        >
-                          Anuradha Bhardwaj
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -977,8 +1038,7 @@ function Home() {
                   id="name"
                   label="Name"
                   type={"text"}
-                  helperText="Please enter your name"
-                  variant="outlined"
+                  variant="filled"
                   sx={{
                     width: "100%",
                     color: "white",
@@ -992,6 +1052,7 @@ function Home() {
                   required
                   id="email"
                   label="Email"
+                  variant="filled"
                   type={"Email"}
                   sx={{
                     width: "100%",
@@ -1003,6 +1064,7 @@ function Home() {
                 <TextField
                   required
                   id="phone"
+                  variant="filled"
                   type={"phone"}
                   label="Phone"
                   sx={{
@@ -1017,6 +1079,7 @@ function Home() {
                   type="text"
                   id="message"
                   label="Message"
+                  variant="filled"
                   multiline
                   rows={4}
                   sx={{
@@ -1101,10 +1164,7 @@ function Home() {
             : "col-lg-5 col-12 px-lg-5 px-3 position-relative  order-lg-last order-md-last order-first"
         }
       >
-        <div
-          className="container position-sticky mt-5"
-          style={{ top: "0" }}
-        >
+        <div className="container position-sticky mt-5" style={{ top: "45px" }}>
           <div
             className="position-relative"
             style={{
