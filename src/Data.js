@@ -1,155 +1,127 @@
 export const Data = [
   {
-    image: "/logo192.png",
+    image: "/images/cars4u.png",
     text: "hello",
     name: "cars4u",
     category:"internship"
   },
   {
-    image: "/logo192.png",
+    image: "/images/myntra.png",
     text: "hello",
     name: "Myntra Clone",
     category:"internship"
   },
   {
-    image: "/logo192.png",
+    image: "/images/flipkart.png",
+    text: "hello",
+    name: "Flipkart Clone",
+  },
+  {
+    image: "/images/handbook.png",
     text: "hello",
     name: "HandBook",
     category:"internship"
   },
   {
-    image: "/logo192.png",
+    image: "/images/whiteboard.png",
     text: "hello",
     name: "WhiteBoard",
     category:"internship"
   },
   {
-    image: "/logo192.png",
+    image: "/images/stress.png",
     text: "hello",
     name: "Stress Therapist",
     category:"internship"
   },
   {
-    image: "/logo192.png",
+    image: "/images/greenfashion.png",
     text: "hello",
     name: "Green Fashion",
     category:"internship"
   },
   {
-    image: "/logo192.png",
+    image: "/images/synergy.png",
     text: "hello",
     name: "Synergy Shred",
     category:"personal"
   },
   {
-    image: "/logo192.png",
-    text: "hello",
-    name: "HandBook",
-    category:"personal"
-  },
-  {
-    image: "/logo192.png",
-    text: "hello",
-    name: "EHS",
-    category:"personal"
-  },
-  {
-    image: "/logo192.png",
-    text: "hello",
-    name: "EHS",
-    category:"personal"
-  },
-  {
-    image: "/logo192.png",
+    image: "/images/payment.png",
     text: "hello",
     name: "Payment Gateway",
     category:"personal"
   },
   {
-    image: "/logo192.png",
+    image: "/images/ehs.png",
     text: "hello",
     name: "EHS",
     category:"personal"
   },
   {
-    image: "/logo192.png",
+    image: "/images/quantumSeo.png",
     text: "hello",
     name: "Quantum SEO",
     category:"personal"
   },
   {
-    image: "/logo192.png",
+    image: "/images/drum.png",
     text: "hello",
     name: "Drum Kit",
     category:"personal"
   },
   {
-    image: "/logo192.png",
+    image: "/images/quantum.png",
     text: "hello",
     name: "Quantum Task",
   },
   {
-    image: "/logo192.png",
+    image: "/images/idesign.png",
     text: "hello",
     name: "Idesign",
   },
   {
-    image: "/logo192.png",
+    image: "/images/wobot.png",
     text: "hello",
-    name: "obot",
+    name: "Wobot",
   },
   {
-    image: "/logo192.png",
+    image: "/images/portfolio.png",
     text: "hello",
-    name: "tech",
+    name: "Quantum Portfolio",
   },
   {
-    image: "/logo192.png",
-    text: "hello",
-    name: "Quantum",
-  },
-  {
-    image: "/logo192.png",
+    image: "/images/auction.png",
     text: "hello",
     name: "Cars Auction",
   },
   {
-    image: "/logo192.png",
+    image: "/images/netclan.png",
     text: "hello",
     name: "NetClan",
   },
   {
-    image: "/logo192.png",
-    text: "hello",
-    name: "test1",
-  },
-  {
-    image: "/logo192.png",
+    image: "/images/todo.png",
     text: "hello",
     name: "TodoList",
   },
   {
-    image: "/logo192.png",
-    text: "hello",
-    name: "Flipkart Clone",
-  },
-  {
-    image: "/logo192.png",
+    image: "/images/task1.png",
     text: "hello",
     name: "Task1",
   },
   {
-    image: "/logo192.png",
+    image: "/images/task2.png",
     text: "hello",
     name: "Task2",
   },
   {
-    image: "/logo192.png",
+    image: "/images/genome.png",
     text: "hello",
     name: "GenomEditor",
   },
   {
-    image: "/logo192.png",
+    image: "/images/covid.png",
     text: "hello",
     name: "CovidTracker",
   },

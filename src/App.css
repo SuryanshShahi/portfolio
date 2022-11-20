@@ -98,7 +98,22 @@
   top: 0;
   color: white;
 }
+.projectCard{
+  position: relative;
+  transition: 0.8s;
+  animation: animatebottom 3s;
+}
 
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 .carousel-inner::-webkit-scrollbar {
   width: 0px;
   height: 0px;

@@ -43,7 +43,7 @@ function Home() {
             className="py-5 text-white"
             style={{ fontWeight: "400", fontSize: "48px" }}
           >
-            Frontend Developer
+            Web Developer
           </h1>
           <p
             className=""
@@ -751,7 +751,7 @@ function Home() {
                     <img
                       src={e.image}
                       className="img-fluid"
-                      style={{ height: "300px" }}
+                      style={{ height: "270px" }}
                     />
                     <div className="details">
                       <div className="justify-content-center align-items-center d-flex">
