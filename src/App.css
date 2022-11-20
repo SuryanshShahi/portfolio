@@ -71,6 +71,18 @@
     margin-top: 50px;
   }
 }
+@media (max-width: 990px) {
+  .myImage {
+    max-width: 70% !important;
+    margin-inline: auto !important;
+  }
+}
+@media (max-width: 700px) {
+  .myImage {
+    padding-inline: 20px !important;
+    max-width: none !important;
+  }
+}
 .MuiTabs-scroller {
   overflow-x: scroll !important;
 }

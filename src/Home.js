@@ -28,7 +28,7 @@ function Home() {
       <div
         className={
           column
-            ? "col-lg-8 col-12 px-lg-5 order-lg-first order-md-first order-last"
+            ? "col-lg-8 col-12 px-lg-5 order-lg-first order-last"
             : "col-lg-7 col-12 px-lg-5"
         }
         style={{ borderRight: "1px solid #888" }}
@@ -1160,11 +1160,12 @@ function Home() {
       <div
         className={
           column
-            ? "col-lg-4 col-12 px-lg-5 px-3 position-relative"
-            : "col-lg-5 col-12 px-lg-5 px-3 position-relative  order-lg-last order-md-last order-first"
+            ? "col-lg-4 col-12 position-relative myImage"
+            : "col-lg-5 col-12 position-relative order-lg-last order-first myImage"
         }
+        style={{paddingInline:"80px"}}
       >
-        <div className="container position-sticky mt-5" style={{ top: "45px" }}>
+        <div className="container position-sticky mt-5" style={{ top: "100px" }}>
           <div
             className="position-relative"
             style={{
