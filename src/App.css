@@ -28,7 +28,13 @@
     color: rgba(56, 93, 30, 0.692) c1;
   }
 }
-.css-1p618nz-MuiInputBase-root-MuiFilledInput-root,.css-3gxrtx-MuiInputBase-root-MuiFilledInput-root{
+.css-16c1681,
+.css-909714 {
+  background-color: rgba(255, 255, 255, 0.09) !important;
+  color: white !important;
+}
+.css-1p618nz-MuiInputBase-root-MuiFilledInput-root,
+.css-3gxrtx-MuiInputBase-root-MuiFilledInput-root {
   background-color: rgba(255, 255, 255, 0.09) !important;
   color: white !important;
 }
@@ -98,7 +104,7 @@
   top: 0;
   color: white;
 }
-.projectCard{
+.projectCard {
   position: relative;
   transition: 0.8s;
   animation: animatebottom 3s;
