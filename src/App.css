@@ -1,8 +1,10 @@
 * {
-  /* background-color: #1d1b19; */
   transition: linear 0.4s;
-  /* text-align: justify; */
   font-family: Jost, Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
 }
 .blink-bg {
   font-size: px;
